@@ -39,10 +39,10 @@
   </div>
   <div class="container rounded-top" style="background-color:lightgrey; height:1000px">
     <p1>TV-Show</p1>
-  <form>
+  <form id="form1">
     <div class="form-group">
       <label for="exampleFormControlInput1"></label>
-      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter name of TV show here">
+      <input class="form-control" placeholder="Enter name of TV show here" name="tvshow">
     </div>
     <div class="form-group">
       <label for="exampleFormControlSelect2">Number of seasons watched</label>
@@ -71,8 +71,9 @@
     </div>
   </form>
     <div align="center">
-      <button type="button" class="btn btn-dark">Add</button>
+      <button type="button" class="btn btn-dark" onclick="apiCall()">Add</button>
     </div>
+    <p id="list"></p>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"</script>

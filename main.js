@@ -1,9 +1,10 @@
 //example use of the api
 
 function apiCall(){
-  $.getJSON('https://www.omdbapi.com/?apikey=c4fc25b5&t=' + encodeURI("Prison Break")).then(function(response){
+  x=document.getElementById("form1");
+  y=x.elements["tvshow"].value;
+  $.getJSON('https://www.omdbapi.com/?apikey=c4fc25b5&t=' + encodeURI(y)).then(function(response){
+  document.getElementById("list").innerHTML+=y + "<br>";
   console.log(response.totalSeasons);
 })
 }
-
-apiCall();
