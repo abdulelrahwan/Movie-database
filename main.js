@@ -2,9 +2,10 @@
 
 function apiCall(){
   x=document.getElementById("form1");
-  y=x.elements["tvshow"].value;
-  $.getJSON('https://www.omdbapi.com/?apikey=c4fc25b5&t=' + encodeURI(y)).then(function(response){
-  document.getElementById("list").innerHTML+=y + "<br>";
+  show=x.elements["tvshow"].value;
+  season=x.elements["seasons"].value;
+  $.getJSON('https://www.omdbapi.com/?apikey=c4fc25b5&t=' + encodeURI(show)).then(function(response){
+  document.getElementById("list").innerHTML+=show + " "  + "     "+ "(" + season + ")" +"<br>";
   console.log(response.totalSeasons);
 })
 }
