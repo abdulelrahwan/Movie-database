@@ -52,15 +52,15 @@ function asignVariable(data,runtime){
   time+=runtime;
 
   if(numEp!=0 && time!=0){
-<<<<<<< HEAD
+
     document.getElementById("seriesmin").innerHTML+=time*numEp+" minutes"+"<br>";
     total+=numEp*time;
     document.getElementById("total").innerHTML="Total=" +total + " minutes";
-=======
+
     document.getElementById("seriesmin").innerHTML+=time*numEp+"<br>";
     total+=numEp*time;
     document.getElementById("total").innerHTML="Total=" +total;
->>>>>>> a9e740a075507a1f59a5c3441dd390bfc3945a31
+
     numEp=0;
     time=0;
   }
