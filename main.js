@@ -57,9 +57,6 @@ function asignVariable(data,runtime){
     total+=numEp*time;
     document.getElementById("total").innerHTML="Total=" +total + " minutes";
 
-    document.getElementById("seriesmin").innerHTML+=time*numEp+"<br>";
-    total+=numEp*time;
-    document.getElementById("total").innerHTML="Total=" +total;
 
     numEp=0;
     time=0;
