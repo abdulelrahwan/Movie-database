@@ -6,7 +6,7 @@ function apiCall(){
   season=x.elements["seasons"].value;
 
   $.getJSON('https://www.omdbapi.com/?apikey=c4fc25b5&t=' + encodeURI(show)).then(function(response){
-  document.getElementById("list").innerHTML+="<b>"+show+"</b>" + " "  + "     "+ "(" + season + ")" +"<br>";
+  document.getElementById("list").innerHTML+="<font color=white>"+"<b>"+show+"</b>" + " "  + "     "+ "(" + season + ")" +"<br>"+"</font>";
 
   var LengthOfEpisodeString = (response.Runtime).replace(' min','');; //inshallah this works lol damn this is smart
   var LengthOfEpisode = parseInt(LengthOfEpisodeString); //oktry it
@@ -19,6 +19,16 @@ function apiCall(){
     document.getElementById('pic').src=image;
     document.getElementById('pic').style="border-radius:5%"
   }
+
+  console.log(response.Response);
+   var response = response.Response;
+   if (response = "False"){
+     //document.getElementById('addButton').data-toggle="modal";
+     //document.getElementById('addButton').data-target="#exampleModal";
+     $('button').attr('data-toggle', "modal");
+     $('button').attr('data-target', "#exampleModal");
+     //data-toggle="modal" data-target="#exampleModal"
+   }
 
 
   })
@@ -59,14 +69,14 @@ function asignVariable(data,runtime){
     var timeForShow = time * numEp;
     var daysShow = parseInt(timeForShow/24/60);
     var hoursShow = parseInt(timeForShow/60%24);
-    var showTimeString = "       " + String(daysShow) + " days : " + String(hoursShow) + " hours : " + String(timeForShow%60) + " minutes";
+    var showTimeString = "<font color=white>"+"       " + String(daysShow) + " days : " + String(hoursShow) + " hours : " + String(timeForShow%60) + " minutes"+"</font>";
     document.getElementById("seriesmin").innerHTML+=showTimeString+"<br>";
 
     total+=numEp*time;
     var days = parseInt(total/24/60);
     var hours = parseInt(total/60%24);
-    var totalString = String(days) + " days : " + String(hours) + " hours : " + String(total%60) + " minutes";
-    document.getElementById("total").innerHTML="Total = " + totalString;
+    var totalString ="<font color=white>" +String(days) + " days : " + String(hours) + " hours : " + String(total%60) + " minutes"+"</font>";
+    document.getElementById("total").innerHTML="<font color=white>"+"Total = " + totalString+"</font>";
 
 
 
