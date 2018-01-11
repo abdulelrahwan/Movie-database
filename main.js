@@ -92,7 +92,7 @@ function asignVariable(data,runtime){
     var daysShow = parseInt(timeForShow/24/60);
     var hoursShow = parseInt(timeForShow/60%24);
     var showTimeString = "<font color=white>"+"       " + String(daysShow) + " days : " + String(hoursShow) + " hours : " + String(timeForShow%60) + " minutes"+"</font>";
-    document.getElementById("seriesmin").innerHTML+=showTimeString+"<br>";
+    document.getElementById("seriesmin").innerHTML+=showTimeString+" <br>";
 
     total+=numEp*time;
     var days = parseInt(total/24/60);
