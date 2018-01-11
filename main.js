@@ -6,7 +6,7 @@ function apiCall(){
   season=x.elements["seasons"].value;
 
   $.getJSON('https://www.omdbapi.com/?apikey=c4fc25b5&t=' + encodeURI(show)).then(function(response){
-  document.getElementById("list").innerHTML+=show + " "  + "     "+ "(" + season + ")" +"<br>";
+  document.getElementById("list").innerHTML+="<b>"+show+"</b>" + " "  + "     "+ "(" + season + ")" +"<br>";
 
   var LengthOfEpisodeString = (response.Runtime).replace(' min','');; //inshallah this works lol damn this is smart
   var LengthOfEpisode = parseInt(LengthOfEpisodeString); //oktry it
@@ -14,8 +14,11 @@ function apiCall(){
 
   asignVariable(0,LengthOfEpisode);
 
-
-
+  var image = response.Poster;
+  if (image != "N/A"){
+    document.getElementById('pic').src=image;
+    document.getElementById('pic').style="border-radius:5%"
+  }
 
 
   })
@@ -64,6 +67,8 @@ function asignVariable(data,runtime){
     var hours = parseInt(total/60%24);
     var totalString = String(days) + " days : " + String(hours) + " hours : " + String(total%60) + " minutes";
     document.getElementById("total").innerHTML="Total = " + totalString;
+
+
 
     numEp=0;
     time=0;
