@@ -53,10 +53,17 @@ function asignVariable(data,runtime){
 
   if(numEp!=0 && time!=0){
 
-    document.getElementById("seriesmin").innerHTML+=time*numEp+" minutes"+"<br>";
-    total+=numEp*time;
-    document.getElementById("total").innerHTML="Total=" +total + " minutes";
+    var timeForShow = time * numEp;
+    var daysShow = parseInt(timeForShow/24/60);
+    var hoursShow = parseInt(timeForShow/60%24);
+    var showTimeString = "       " + String(daysShow) + " days : " + String(hoursShow) + " hours : " + String(timeForShow%60) + " minutes";
+    document.getElementById("seriesmin").innerHTML+=showTimeString+"<br>";
 
+    total+=numEp*time;
+    var days = parseInt(total/24/60);
+    var hours = parseInt(total/60%24);
+    var totalString = String(days) + " days : " + String(hours) + " hours : " + String(total%60) + " minutes";
+    document.getElementById("total").innerHTML="Total = " + totalString;
 
     numEp=0;
     time=0;
