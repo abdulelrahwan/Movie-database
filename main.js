@@ -28,8 +28,6 @@ function apiCall(){
     }
 
     if(response.Response=="True"){
-      $('button').attr('data-toggle', "");
-      $('button').attr('data-target', "");
 
 
   document.getElementById("list").innerHTML+="<font color=white>"+"<b>"+show+"</b>" + " "  + "     "+ "(" + season + ")" +"<br>"+"</font>";
