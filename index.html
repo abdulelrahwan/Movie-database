@@ -6,7 +6,7 @@
   <title>Tv Series Checker</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
   <link rel="stylesheet" href="jquery-ui.css">
-  <link rel = "stylesheet" href="main.css"
+  <link rel = "stylesheet" href="main.css">
   <script src="jquery-ui.js"></script>
 </head>
 
@@ -92,7 +92,7 @@
 
 
     <div>
-    <p id="total"><font color="white"> Total= 0</p></font>
+    <p id="total"><font color="white"> </p></font>
 
     </div>
   </div>
@@ -122,9 +122,13 @@
     </div>
 
 
+      <div class="footer">
+        <div class="text">
+              <p text-align="left">Created by:  &emsp; &emsp; &emsp;&emsp;&emsp;&emsp;<a href="https:www.akrameldamaty.com">Akram Eldamaty</a>&emsp;<a href="https://github.com/AkramEld"><i class="fa fa-github" aria-hidden="true"></i></a> &emsp;  ||  &emsp;<a href="http://abdulelrahwan.github.io"> Abdul Elrahwan </a>  &emsp;<a href="https://github.com/abdulelrahwan"><i class="fa fa-github" aria-hidden="true"></i></a></p>
+        </div>
 
   </div>
-
+  <script src="https://use.fontawesome.com/76bc3acc89.js"></script>
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"</script>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -135,18 +139,118 @@
   <script>
 $( function() {
   var availableTags = [
-    "American Horror Story",
-    "American Idol",
-    "American Ninja Warrior",
-    "American Odyssey",
-    "American Pickers",
-    "American Restoration",
-    "Ancient Aliens",
-    "Anger Management",
-    "Another Period",
-    "Antiques Roadshow UK",
-    "Aquarius",
-    "Archer"
+   "American Horror Story",
+   "American Idol",
+   "American Ninja Warrior",
+   "American Odyssey",
+   "American Pickers",
+   "American Restoration",
+   "Ancient Aliens",
+   "Anger Management",
+   "Another Period",
+   "Antiques Roadshow UK",
+   "Aquarius",
+   "Archer",
+   "Planet Earth II",
+   "Band of Brothers",
+   "Planet Earth ",
+   "Game of Thrones",
+   "Breaking Bad",
+   "The Wire",
+   "Rick and Morty",
+   "Cosmos: A Spacetime Odyssey",
+   "Cosmos",
+   "The World at War",
+   "The Sopranos",
+   "Life",
+   "Avatar: The Last Airbender",
+   "Sherlock",
+   "The Civil War",//works
+   "Human Planet",
+   "The Twilight Zone",
+   "Dekalog",
+   "Firefly",
+   "True Detective",
+   "Last Week Tonight with John Oliver",
+   "Fullmetal Alchemist: Brotherhood",
+   "Fargo",
+   "Batman: The Animated Series",
+   "Death Note",
+   "The Blue Planet",
+   "One Punch Man",
+   "Das Boot",
+   "Frozen Planet",
+   "Monty Python's Flying Circus",
+   "Cowboy Bebop",
+   "Africa",
+   "Stranger Things",
+    "Pride and Prejudice",
+    "Black Mirror",
+    "Westworld",
+    "House of Cards",
+    "Arrested Development",
+    "Friends",
+    "Seinfeld",
+    "Only Fools and Horses",
+    "TVF Pitchers",
+    "Over the Garden Wall",
+    "Twin Peaks",
+    "Narcos",
+    "I, Claudius",
+    "Freaks and Geeks",
+    "Gravity Falls",
+    "Fawlty Towers",
+    "Blackadder Goes Forth",
+    "Rome",                    //new from here down fml
+    "Oz",
+    "The Punisher",
+    "The Simpsons",
+    "The Marvelous Mrs. Maisel",//ima delete some and see where the error ends
+    "The Office",
+    "Peaky Blinders",
+    "South Park",
+    "Attack on Titan",
+    "It's Always Sunny in Philadelphia",
+    "The West Wing",
+    "The Jinx: The Life and Deaths of Robert Durst",
+    "House",
+    "The Return of Sherlock Holmes",
+    "The Adventures of Sherlock Holmes",
+    "Nathan for You",
+    "Dragon Ball Z",
+    "Chappelle's Show",
+    "Chappelle's Show",
+    "Chappelle's Show",
+    "Six Feet Under",
+    "Dragon Ball Z",
+    "Dark",
+    "The Crown",
+    "Deadwood",
+    "This Is Us",
+    "Curb Your Enthusiasm",
+    "Archer",
+    "The Thick of It",
+    "Top Gear",
+    "Battlestar Galactica",
+    "From the Earth to the Moon",
+    "Better Call Saul",
+    "Making a Murderer",
+    "Dexter",
+    "The X Files",
+    "Long Way Round",
+    "The Shield",
+    "North & South",
+    "The Grand Tour",
+    "Black-Adder II",
+    "Daredevil",
+    "Shame",
+    "Shameless",
+    "Downton Abbey",
+    "Black Adder the Third",
+    "Doctor Who",
+    "Code Geass: Lelouch of the Rebellion",
+    "Samurai X: Trust and Betrayal",
+    "Spaced"
   ];
   $( "#tvshow" ).autocomplete({
     source: availableTags
