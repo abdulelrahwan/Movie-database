@@ -4,3 +4,25 @@
     overflow-x: hidden; /* add padding to account for vertical scrollbar */
     z-index:1000 !important;
 }
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: Black;
+    color: white;
+    height: 35px;
+    border-radius:5%;
+    background-color: rgba(0,0,0,0.7);
+
+}
+
+.text{
+text-align: center;
+}
+
+.icons{
+  text-align: center;
+  margin-top: 1px;
+}
